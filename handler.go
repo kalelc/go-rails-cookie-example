@@ -1,11 +1,10 @@
 package main
 
 import (
-	"fmt"
 	"html/template"
 	"net/http"
 
-	"github.com/Beetrack/rails-cookie-go/decrypt"
+	railscook "github.com/kalelc/go-rails-cook"
 )
 
 func Index(w http.ResponseWriter, r *http.Request) {
@@ -20,10 +19,16 @@ func Index(w http.ResponseWriter, r *http.Request) {
 }
 
 func Result(w http.ResponseWriter, r *http.Request) {
-	cookie := r.FormValue("name")
-	salt := r.FormValue("salt")
+	value := r.FormValue("cookie")
 	secret := r.FormValue("secret")
-	cookie := decrypt.Rails5Cookie{Value: cookie, SecretKeyBase: secret, Salt: salt}
-	fmt.Println(cookie)
+	salt := r.FormValue("salt")
 
+	cookie := railscook.Cookie{Value: value, SecretKeyBase: secret, Salt: salt}
+	cookie.Decrypt()
+
+	templates := template.Must(template.ParseFiles("views/result.html"))
+
+	if err := templates.ExecuteTemplate(w, "result.html", cookie); err != nil {
+		http.Error(w, err.Error(), http.StatusInternalServerError)
+	}
 }
