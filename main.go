@@ -3,11 +3,18 @@ package main
 import (
 	"fmt"
 	"net/http"
+	"os"
 )
 
 func main() {
 	router := NewRouter()
-	fmt.Println("* Listening on 8000 port")
+	port := os.Getenv("PORT")
+
+	if os.Getenv("PORT") == "" {
+		port = "8000"
+	}
+
+	fmt.Println("* Listening on " + port + " port")
 	fmt.Println("* Use Ctrl-C to stop")
-	http.ListenAndServe(":8000", router)
+	http.ListenAndServe(":"+port, router)
 }
