@@ -10,7 +10,7 @@ import (
 func Index(w http.ResponseWriter, r *http.Request) {
 	switch r.Method {
 	case http.MethodGet:
-		templates := template.Must(template.ParseFiles("views/index.html"))
+		templates := template.Must(template.ParseFiles("views/top.html", "views/index.html"))
 
 		if err := templates.ExecuteTemplate(w, "index.html", nil); err != nil {
 			http.Error(w, err.Error(), http.StatusInternalServerError)
