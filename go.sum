@@ -4,6 +4,8 @@ github.com/kalelc/go-rails-cook v1.1.0 h1:avQ0v9qErWk7o419Y4x/qM9aevsZd1O6QDWNJl
 github.com/kalelc/go-rails-cook v1.1.0/go.mod h1:0Cq9L1FRRed1vAx4mVjFTbUfSS2Wo74ahNBaN9e3JvM=
 github.com/kalelc/go-rails-cook v1.1.1 h1:PW1X/OEJ2yhN4fv8bc/+JEmDKErGzWZ/KxAJfa+Lvko=
 github.com/kalelc/go-rails-cook v1.1.1/go.mod h1:0Cq9L1FRRed1vAx4mVjFTbUfSS2Wo74ahNBaN9e3JvM=
+github.com/kalelc/go-rails-cook v1.2.1 h1:QiMebRS60Bc/hNP9UtwSNuPWrQOQQp1DV/jXoka4qew=
+github.com/kalelc/go-rails-cook v1.2.1/go.mod h1:0Cq9L1FRRed1vAx4mVjFTbUfSS2Wo74ahNBaN9e3JvM=
 golang.org/x/crypto v0.0.0-20190308221718-c2843e01d9a2/go.mod h1:djNgcEr1/C05ACkg1iLfiJU5Ep61QUkGW8qpdssI0+w=
 golang.org/x/crypto v0.0.0-20190911031432-227b76d455e7 h1:0hQKqeLdqlt5iIwVOBErRisrHJAN57yOiPRQItI20fU=
 golang.org/x/crypto v0.0.0-20190911031432-227b76d455e7/go.mod h1:yigFU9vqHzYiE8UmvKecakEJjdnWj3jj499lnFckfCI=
