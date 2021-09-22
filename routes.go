@@ -43,4 +43,10 @@ var routes = Routes{
 		"POST",
 		Result,
 	},
+	Route{
+		"headers",
+		"/headers",
+		"GET",
+		Headers,
+	},
 }
